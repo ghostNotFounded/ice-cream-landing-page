@@ -1,0 +1,189 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+:root {
+    --var: #004A01;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+nav h1 {
+    color: var(--var);
+    transition: color .3s;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    width: 95%;
+    height: 10vh;
+    color: #515151;
+}
+
+nav ul {
+    list-style: none;
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+}
+
+nav ul li {
+    position: relative;
+    display: inline;
+    padding: 45px
+}
+
+nav ul li a {
+    position: relative;
+    z-index: 10;
+    text-decoration: none;
+    color: #515151;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -10%;
+    height: 10px;
+    width: 0;
+    background: var(--var);
+    opacity: .7;
+    transition: width .3s;
+}
+
+nav ul li a:hover::after {
+    width: 120%;
+}
+
+section {
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    top: 10vh;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+}
+
+.main {
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    border-radius: 10px;
+    grid-column: 2/3;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    background: linear-gradient(-35deg, #8BC901, #004A01);
+    transition: .9s ease-in-out;
+}
+
+.main img {
+    position: absolute;
+    right: -100px;
+    height: 150%;
+    top: -200px;
+    transition: .4s ease-in-out;
+    filter: drop-shadow(30px 10px 4px rgba(17, 17, 17, .2));
+}
+
+.main h1 {
+    position: absolute;
+    color: #fff;
+    font-size: 100px;
+    align-self: center;
+    margin: 20px;
+    transition: .4s ease-in-out;
+}
+
+.main button {
+    position: absolute;
+    color: #fff;
+    font-size: 16px;
+    top: 350px;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+    margin: 25px;
+    border: solid 1px #fff;
+    border-radius: 25px;
+}
+
+.main p {
+    position: absolute;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 200;
+    top: 300px;
+    margin: 25px;
+}
+
+.main #tchocolate {
+    opacity: 0;
+}
+
+.main #tstrawberry {
+    opacity: 0;
+}
+
+.main #chocolate {
+    top: -20px;
+    height: 100%;
+    opacity: 0;
+}
+
+.main #strawberry {
+    transform: rotate(-45deg);
+    top: -20px;
+    height: 100%;
+    right: -140px;
+    opacity: 0;
+}
+
+.nav {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    grid-column: 3/3;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav img {
+    height: 180%;
+}
+
+.nav.schocolate img {
+    height: 100%;
+}
+
+.nav.smint {
+    background: linear-gradient(to right, #004A01, #8BC901);
+}
+
+.nav.schocolate {
+    background: linear-gradient(to right, #72564B, #110809);
+}
+
+.nav.sstawberry {
+    background: linear-gradient(to right, #DF393F, #920000);
+}
